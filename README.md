@@ -14,7 +14,7 @@ Optional<Designated> invalidValue = Designated.newBuilder().build();
 results in an ``empty`` Optional.
 
 
-The Designated objects builder, just needs to implement the ```ValidatingBuilder<T>``` interface 
+The Designated.Builder just needs to implement the ```ValidatingBuilder<T>``` interface 
 and by that implement the rules for validity and the Class of the designated object.
 
 ```
