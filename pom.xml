@@ -40,7 +40,7 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <showDeprecation>true</showDeprecation>
-                    <showWarnings>true</showWarnings></configuration></plugin></plugins></build>
+                    <showWarnings>true</showWarnings></configuration></plugin>
             <!--<plugin>-->
                 <!--<groupId>org.apache.maven.plugins</groupId>-->
                 <!--<artifactId>maven-source-plugin</artifactId></plugin>-->
@@ -53,10 +53,10 @@
                 <!--<groupId>org.apache.maven.plugins</groupId>-->
                 <!--<artifactId>maven-deploy-plugin</artifactId>-->
                 <!--<version>2.8.2</version></plugin>-->
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-release-plugin</artifactId>-->
-                <!--<version>2.5.3</version></plugin></plugins></build>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version></plugin></plugins></build>
 
     <scm>
         <url>https://github.com/StefanSchrass/validating-builder</url>
