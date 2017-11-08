@@ -15,7 +15,7 @@ results in an ``empty`` Optional.
 
 
 The Designated.Builder just needs to implement the ```ValidatingBuilder<T>``` interface 
-and by that implement the rules for validity and the Class of the designated object.
+and by that implement the rules for validity.
 
 ```
 public class Designated {
@@ -35,11 +35,6 @@ public class Designated {
         @Override
         protected Boolean isValid() {
             return null != value;
-        }
-        
-        @Override
-        protected Class<Designated> getDesignatedClass() {
-            return Designated.class;
         }
         
         public Builder withValue(String value) {
