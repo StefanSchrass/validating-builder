@@ -48,8 +48,8 @@
 
     <scm>
         <url>https://github.com/StefanSchrass/validating-builder</url>
-        <connection>scm:git:https://github.com/StefanSchrass/validating-builder.git</connection>  <tag>HEAD</tag>
-  </scm>
+        <connection>scm:git:https://github.com/StefanSchrass/validating-builder.git</connection>
+        <tag>HEAD</tag></scm>
 
     <distributionManagement>
         <repository>
