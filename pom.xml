@@ -4,7 +4,7 @@
 
     <groupId>de.sschrass.util</groupId>
     <artifactId>validating-builder</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <description>A validating Builder with java.util.Optional-support for the resulting instance</description>
 
@@ -49,7 +49,7 @@
     <scm>
         <url>https://github.com/StefanSchrass/validating-builder</url>
         <connection>scm:git:https://github.com/StefanSchrass/validating-builder.git</connection>
-        <tag>HEAD</tag></scm>
+        <tag>validating-builder-1.0.1</tag></scm>
 
     <distributionManagement>
         <repository>
