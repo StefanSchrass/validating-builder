@@ -42,3 +42,5 @@ public class Designated {
     }
 }
 ```
+
+Please note that one does not have to implement a ``build()``-method.
