@@ -3,14 +3,14 @@ A validating Builder with java.util.Optional-support for the resulting instance.
 
 # Usage
 It is as simple as that:
-<code>
-Optional< Designated> validValue = Designated.newBuilder().withValue("a value").build();
-</code>
+```
+Optional<Designated> validValue = Designated.newBuilder().withValue("a value").build();
+```
 
-The Designated objects builder, just needs to implement the `ValidatingBuilder<T>` interface 
+The Designated objects builder, just needs to implement the ```ValidatingBuilder<T>``` interface 
 and by that implement the rules for validity and the Class of the designated object.
 
-<code>
+```
 public class Designated {
     private final String value;
 
@@ -24,21 +24,21 @@ public class Designated {
 
     public static final class Builder extends ValidatingBuilder<Designated> {
         private String value;
-
+        
         @Override
         protected Boolean isValid() {
             return null != value;
         }
-
+        
         @Override
         protected Class<Designated> getDesignatedClass() {
             return Designated.class;
         }
-
+        
         public Builder withValue(String value) {
             this.value = value;
             return this;
         }
     }
 }
-</code>
+```
