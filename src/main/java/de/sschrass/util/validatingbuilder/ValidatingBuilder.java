@@ -13,6 +13,7 @@ import java.util.Optional;
 @ParametersAreNonnullByDefault
 abstract public class ValidatingBuilder<T> {
     private static final Logger LOGGER = LoggerFactory.getLogger(ValidatingBuilder.class);
+
     protected abstract Boolean isValid();
 
     public Optional<T> build() {

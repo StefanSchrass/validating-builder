@@ -1,7 +1,12 @@
-# validating-builder
-A validating Builder with java.util.Optional-support for the resulting instance.
+## Item 2 of Effective Java (2nd Edition), Joshua Bloch
+>It is critical that they be checked after copying the parameters from the builder to the object, and that they be checked on the object fields rather than the builder fields (Item 39). If any invariants are violated, the build method should throw an IllegalStateException (Item 60). 
 
-# Usage
+This Builder does not follow these items by the letter.
+
+1. I found it cumbersome to perform the validation in the designated objects constructor itself and
+2. I don't like Exceptions at all, so I opted to return empty in such cases.
+
+## Usage
 It is as simple as that:
 ```
 Optional<Designated> validValue = Designated.newBuilder().withValue("a value").build();
@@ -11,10 +16,10 @@ while this:
 Optional<Designated> invalidValue = Designated.newBuilder().build();
 ```
 
-results in an ``empty`` Optional.
+results in an ``Optional.empty()``.
 
 
-The Designated.Builder just needs to implement the ```ValidatingBuilder<T>``` interface 
+The ``Builder`` just needs to implement the ``ValidatingBuilder<T>`` interface 
 and by that implement the rules for validity.
 
 ```
