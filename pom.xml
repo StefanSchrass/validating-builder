@@ -62,7 +62,7 @@
 
     <scm>
         <url>https://github.com/StefanSchrass/validating-builder/tree/master</url>
-        <connection>scm:git:git://github.com/StefanSchrass/validating-builder.git</connection>
+        <connection>scm:git:https://github.com/StefanSchrass/validating-builder.git</connection>
         <developerConnection>scm:git:ssh://github.com/StefanSchrass/validating-builder.git</developerConnection>
         <tag>validating-builder-1.0.7</tag></scm>
 
