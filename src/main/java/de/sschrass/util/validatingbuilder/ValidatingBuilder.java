@@ -30,17 +30,17 @@ abstract public class ValidatingBuilder<T> {
         Optional<T> designated = Optional.empty();
         final Optional<Class<T>> designatedClass = designatedClassFromType(typeFromBuilderClass(builderClass));
         if (designatedClass.isPresent()) {
-            designated = designatedFromDesignatedClass(designatedClass.get());
+            designated = designatedFromDesignatedClassAndBuilderClass(designatedClass.get(), builderClass);
         }
 
         return designated;
     }
 
-    private Optional<T> designatedFromDesignatedClass(Class<T> designatedClass) {
+    private Optional<T> designatedFromDesignatedClassAndBuilderClass(Class<T> designatedClass, Class<? extends ValidatingBuilder> builderClass) {
         Optional<T> designated = Optional.empty();
         Optional<Constructor<T>> builderCtor = Optional.empty();
 
-        try { builderCtor = Optional.ofNullable(designatedClass.getDeclaredConstructor(getClass())); }
+        try { builderCtor = Optional.ofNullable(designatedClass.getDeclaredConstructor(builderClass)); }
         catch (NoSuchMethodException e) {
             LOGGER.error("Could get a suitable constructor for the designated object, due to {}", e.getMessage());
         }
