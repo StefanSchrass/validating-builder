@@ -19,11 +19,18 @@ abstract public class ValidatingBuilder<T> {
 
     public Optional<T> build() {
         Optional<T> designated = Optional.empty();
-        if (isValid()) {
-            final Optional<Class<T>> designatedClass = designatedClassFromType(typeFromBuilderClass(getClass()));
-            if (designatedClass.isPresent()) {
-                designated = designatedFromDesignatedClass(designatedClass.get());
-            }
+        if (this.isValid()) {
+            designated = designatedFromBuilderClass(this.getClass());
+        }
+
+        return designated;
+    }
+
+    private Optional<T> designatedFromBuilderClass(Class<? extends ValidatingBuilder> builderClass) {
+        Optional<T> designated = Optional.empty();
+        final Optional<Class<T>> designatedClass = designatedClassFromType(typeFromBuilderClass(builderClass));
+        if (designatedClass.isPresent()) {
+            designated = designatedFromDesignatedClass(designatedClass.get());
         }
 
         return designated;
