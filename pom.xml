@@ -4,7 +4,7 @@
 
     <groupId>de.sschrass.util</groupId>
     <artifactId>validating-builder</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.7-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A validating Builder with java.util.Optional-support for the resulting instance</description>
@@ -70,10 +70,12 @@
         <repository>
             <id>bintray</id>
             <url>https://api.bintray.com/maven/sschrass/validating-builder/validating-builder/;publish=1</url></repository></distributionManagement>
+
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url></license></licenses>
+
     <developers>
         <developer>
             <name>Stefan Schrass</name>
