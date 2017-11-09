@@ -4,7 +4,7 @@
 
     <groupId>de.sschrass.util</groupId>
     <artifactId>validating-builder</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A validating Builder with java.util.Optional-support for the resulting instance</description>
