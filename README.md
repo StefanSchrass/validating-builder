@@ -1,3 +1,5 @@
+[ ![Download](https://api.bintray.com/packages/sschrass/validating-builder/validating-builder/images/download.svg) ](https://bintray.com/sschrass/validating-builder/validating-builder/_latestVersion)
+
 ## Item 2 of Effective Java (2nd Edition), Joshua Bloch
 >It is critical that they be checked after copying the parameters from the builder to the object, and that they be checked on the object fields rather than the builder fields (Item 39). If any invariants are violated, the build method should throw an IllegalStateException (Item 60). 
 
