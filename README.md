@@ -4,7 +4,7 @@
 This Builder does not follow these items by the letter.
 
 1. I found it cumbersome to perform the validation in the designated objects constructor itself and
-2. I don't like Exceptions at all, so I opted to return empty in such cases.
+2. I don't like Exceptions at all, so I opted to return ``Optional.empty()`` in such cases.
 
 ## Usage
 It is as simple as that:
